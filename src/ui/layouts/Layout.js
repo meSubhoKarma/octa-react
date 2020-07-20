@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
         <ViewWrapper>
           {children}
           <p style={{ fontSize: "1.8rem", bottom: "0%", color: "grey" }}>
-            @meSubhoKarmakar
+            @meSubhoKarma
           </p>
         </ViewWrapper>
       </Wrapper>
