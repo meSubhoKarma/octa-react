@@ -87,13 +87,13 @@ function FillApplicant({ getJobs, job: { jobs, loading }, createApplicant }) {
             value={note}
             onChange={(e) => onChange(e)}
           />
+          <ButtonWrapper>
+            <PrimaryButton type="submit" onClick={(e) => onSubmit(e)}>
+              Submit
+            </PrimaryButton>
+          </ButtonWrapper>
         </StyledForm>
       </FormWrapper>
-      <ButtonWrapper>
-        <PrimaryButton type="submit" onClick={(e) => onSubmit(e)}>
-          Submit
-        </PrimaryButton>
-      </ButtonWrapper>
     </PageWrapper>
   )
 }

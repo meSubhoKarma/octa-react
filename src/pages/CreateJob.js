@@ -7,7 +7,7 @@ import { PageWrapper, FormWrapper, ButtonWrapper } from "../ui/elements/Wrapper"
 import { StyledForm, Label, StyledInput } from "../ui/elements/Form"
 import { PrimaryButton } from "../ui/elements/Button"
 
-const CreateJob = ({ createJob }) => {
+const CreateJob = ({ createJob, history }) => {
   const [formData, setFormData] = useState({
     jobName: "",
     jobDesc: "",
@@ -20,7 +20,7 @@ const CreateJob = ({ createJob }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
 
   const onSubmit = (e) => {
-    createJob(formData, true)
+    createJob(formData, history, true)
   }
 
   return (
@@ -52,13 +52,13 @@ const CreateJob = ({ createJob }) => {
             value={reqTech}
             onChange={(e) => onChange(e)}
           />
+          <ButtonWrapper>
+            <PrimaryButton type="submit" onClick={(e) => onSubmit(e)}>
+              Submit
+            </PrimaryButton>
+          </ButtonWrapper>
         </StyledForm>
       </FormWrapper>
-      <ButtonWrapper>
-        <PrimaryButton type="submit" onClick={(e) => onSubmit(e)}>
-          Submit
-        </PrimaryButton>
-      </ButtonWrapper>
     </PageWrapper>
   )
 }

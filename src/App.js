@@ -1,6 +1,7 @@
 import React from "react"
 import {
   BrowserRouter as Router,
+  HashRouter,
   Route,
   Switch,
   Redirect,
@@ -14,7 +15,7 @@ import Search from "./pages/Search"
 
 const App = () => {
   return (
-    <Router history={history}>
+    <HashRouter history={history}>
       <Layout>
         <Switch>
           <Route exact path="/">
@@ -26,7 +27,7 @@ const App = () => {
           <Route exact path="/search" component={Search} />
         </Switch>
       </Layout>
-    </Router>
+    </HashRouter>
   )
 }
 

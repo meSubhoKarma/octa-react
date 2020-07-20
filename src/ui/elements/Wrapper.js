@@ -70,7 +70,7 @@ export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45%;
+  width: 100%;
   margin-top: 4rem;
 `
 
